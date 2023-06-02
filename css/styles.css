@@ -79,7 +79,7 @@ p {
   align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--iris-color);
+  color: #404bbf;
   margin-right: 76px;
 }
 
@@ -93,6 +93,7 @@ p {
 .logo-studio {
   color: var(--navy-color);
 }
+
 .heder-menu {
   font-weight: 500;
   font-size: 16px;
@@ -101,6 +102,10 @@ p {
   color: var(--navy-color);
   padding: 24px 0;
   display: block;
+}
+
+.heder-menu-contacts {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list {
@@ -184,6 +189,7 @@ p {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -355,6 +361,7 @@ p {
   align-items: center;
   justify-content: center;
   fill: #f4f4fd;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover,
@@ -397,6 +404,8 @@ p {
   align-items: center;
   justify-content: center;
   color: var(--grey-color);
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -438,6 +447,10 @@ p {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .options-btn:hover,
@@ -459,6 +472,7 @@ p {
 
 .options-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .options-link:hover,
@@ -477,7 +491,8 @@ p {
   width: calc((100% - 2 * 24px) / 3);
 }
 
-.options-item:hover .overlay {
+.options-item:hover .overlay,
+.options-item:focus .overlay {
   transform: translate(0);
 }
 .options-text {
@@ -502,8 +517,7 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud-color);
-  padding-top: 40px;
-  padding-left: 32px;
+  padding: 40px 32px;
   padding-bottom: 164px;
   padding-right: 32px;
   position: absolute;
@@ -583,6 +597,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-link:hover,
@@ -608,9 +623,10 @@ p {
   width: 408px;
   min-height: 584px;
   left: 50%;
-  top: 80px;
-  transform: translateX(-50%) scale(1);
-  transition: transform 250ms linear;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -624,6 +640,9 @@ p {
 }
 
 .modal-close {
+  position: absolute;
+  top: 24px;
+  left: 24px;
   width: 24px;
   height: 24px;
   background: #e7e9fc;
@@ -633,8 +652,15 @@ p {
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-close-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .modal-close:hover,
 .modal-close:focus {
   background-color: #404bbf;
@@ -643,12 +669,12 @@ p {
 
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
-  background-color: #ffffff;
+  fill: #ffffff;
   border: none;
 }
 
 .is-hidden {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
