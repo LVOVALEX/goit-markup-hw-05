@@ -511,18 +511,16 @@ p {
 .options-img-overlay {
   position: relative;
   overflow: hidden;
-  padding: 40px 32px;
 }
 
 .overlay {
+  padding: 40px 32px;
   display: block;
   background-color: var(--iris-color);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--cloud-color);
-  padding-bottom: 164px;
-  padding-right: 32px;
   position: absolute;
   top: 0;
   width: 100%;
