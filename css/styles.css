@@ -102,9 +102,6 @@ p {
   color: var(--navy-color);
   padding: 24px 0;
   display: block;
-}
-
-.heder-menu-contacts {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -137,7 +134,6 @@ p {
   position: absolute;
   height: 4px;
   left: 0px;
-  top: 44px;
   background: #404bbf;
   border-radius: 2px;
   display: block;
@@ -420,11 +416,6 @@ p {
 .customers-link:focus {
   border-color: #404bbf;
   color: #404bbf;
-}
-
-.customers-link:hover .customers-icon,
-.customers-link:focus .customers-icon {
-  fill: #404bbf;
 }
 
 /*--------------- PORTFOLIO ------------------*/
